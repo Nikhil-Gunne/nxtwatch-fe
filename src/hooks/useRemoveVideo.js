@@ -9,7 +9,7 @@ const useRemoveVideo = () =>{
                 "Authorization":`Bearer ${user.token}`
             }
         }
-        const response = await fetch(`/addvideos/${id}`,options)
+        const response = await fetch(`/api/addvideos/${id}`,options)
         //console.log("removed")
         if (response.ok){
             const videos = JSON.parse(localStorage.getItem("videos"))

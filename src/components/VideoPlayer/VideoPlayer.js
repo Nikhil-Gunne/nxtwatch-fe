@@ -56,7 +56,7 @@ function VideoPlayer(props){
                 }
             }
 
-            const response = await fetch(`/videosplayer/${id}`,options);
+            const response = await fetch(`/api/videosplayer/${id}`,options);
             console.log(response)
             const jsonResponse = await response.json()
             if(response.ok){
@@ -132,7 +132,7 @@ function VideoPlayer(props){
             },
             body:JSON.stringify(video)
         }
-        const response = await fetch("/addvideos",options)
+        const response = await fetch("/api/addvideos",options)
         // console.log(response,2);
         const jsonResponse = await response.json()
         console.log(jsonResponse)
@@ -151,7 +151,7 @@ function VideoPlayer(props){
 
     //function to check is video already reacted
     const checkIsCurentVideoAlreadyReacted = () =>{
-        console.log("checking")
+        // console.log("checking")
         const reactedVideos = JSON.parse(localStorage.getItem("reactedvideos")); 
         // console.log(reactedVideos)
         if(reactedVideos){
@@ -187,7 +187,7 @@ function VideoPlayer(props){
                 },
                 body:JSON.stringify(reactedVideo)
             }
-            const response = await fetch(`/reactedvideos/${video.id}`,options)
+            const response = await fetch(`/api/reactedvideos/${video.id}`,options)
             const jsonResponse = await response.json()
             // console.log(jsonResponse,"op")
             if(response.ok){
@@ -219,7 +219,7 @@ function VideoPlayer(props){
                 },
                 body:JSON.stringify(reactedVideo)
             }
-            const response = await fetch("/reactedvideos",options)
+            const response = await fetch("/api/reactedvideos",options)
             console.log(response,4);
             const jsonResponse =await response.json()
             if(response.ok){

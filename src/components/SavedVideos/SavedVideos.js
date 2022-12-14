@@ -29,7 +29,7 @@ function SavedVideos() {
                     "Authorization": `Bearer ${user.token}`
                 }
             }
-            const response = await fetch("/addvideos", options)
+            const response = await fetch("/api/addvideos", options)
             const jsonResponse = await response.json()
             // console.log(jsonResponse)
             if (response.ok) {
