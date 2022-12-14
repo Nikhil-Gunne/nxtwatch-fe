@@ -9,7 +9,7 @@ const useFetchSavedVideos = () =>{
                 "Authorization":`Bearer ${user.token}`
             }
         }
-        const response = await fetch("/api/addvideos",options)
+        const response = await fetch("https://nxtwatch-api.onrender.com/api/addvideos",options)
         const jsonResponse = await response.json()
         // console.log(jsonResponse)
         if(response.ok){
