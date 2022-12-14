@@ -24,7 +24,7 @@ function useLogin(){
         }
         
             setIsLoading(true)
-            const response = await fetch("/api/user/login",options)
+            const response = await fetch("https://nxtwatch-api.onrender.com/api/user/login",options)
             // console.log(response)
             const jsonResponse = await response.json()
             // console.log(jsonResponse,1)

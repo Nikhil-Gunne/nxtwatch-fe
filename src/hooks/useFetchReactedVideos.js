@@ -12,7 +12,7 @@ const useFetchReactedVideos = () =>{
                 "Authorization":`Bearer ${user.token}`
             }   
         }
-        const response = await fetch("/api/reactedvideos",options)
+        const response = await fetch("https://nxtwatch-api.onrender.com/api/reactedvideos",options)
         // console.log(response,5);
         const jsonResponse =await response.json()
         console.log(jsonResponse)

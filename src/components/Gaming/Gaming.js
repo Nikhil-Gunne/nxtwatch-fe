@@ -22,7 +22,7 @@ function Gaming(){
                     "Authorization":`Bearer ${user.token}`
                 }
             }
-            const response = await fetch("/api/gamingvideos",options)
+            const response = await fetch("https://nxtwatch-api.onrender.com/api/gamingvideos",options)
             const jsonResponse = await response.json()
             console.log(jsonResponse)
             if(response.ok){

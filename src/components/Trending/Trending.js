@@ -28,7 +28,7 @@ function Trending() {
                     "Authorization":`Bearer ${user.token}` 
                 }
             }
-            const response = await fetch("/api/trendingvideos", options)
+            const response = await fetch("https://nxtwatch-api.onrender.com/api/trendingvideos", options)
             const jsonResponse = await response.json()
             if(response.ok){
                 setVideos([...jsonResponse.trendingVideosList])

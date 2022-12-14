@@ -56,8 +56,8 @@ function VideoPlayer(props){
                 }
             }
 
-            const response = await fetch(`/api/videosplayer/${id}`,options);
-            console.log(response)
+            const response = await fetch(`https://nxtwatch-api.onrender.com/api/videosplayer/${id}`,options);
+            //console.log(response)
             const jsonResponse = await response.json()
             if(response.ok){
                 setVideo(jsonResponse.video)
@@ -107,7 +107,6 @@ function VideoPlayer(props){
                 const index = videos.findIndex(obj =>obj.id === id)
                 if(index>=0){
                     setIsVideoPresent(true)
-                    
                 }
                 else{
                     setIsVideoPresent(false)
@@ -132,7 +131,7 @@ function VideoPlayer(props){
             },
             body:JSON.stringify(video)
         }
-        const response = await fetch("/api/addvideos",options)
+        const response = await fetch("https://nxtwatch-api.onrender.com/api/addvideos",options)
         // console.log(response,2);
         const jsonResponse = await response.json()
         console.log(jsonResponse)
@@ -187,7 +186,7 @@ function VideoPlayer(props){
                 },
                 body:JSON.stringify(reactedVideo)
             }
-            const response = await fetch(`/api/reactedvideos/${video.id}`,options)
+            const response = await fetch(`https://nxtwatch-api.onrender.com/api/reactedvideos/${video.id}`,options)
             const jsonResponse = await response.json()
             // console.log(jsonResponse,"op")
             if(response.ok){
@@ -219,7 +218,7 @@ function VideoPlayer(props){
                 },
                 body:JSON.stringify(reactedVideo)
             }
-            const response = await fetch("/api/reactedvideos",options)
+            const response = await fetch("https://nxtwatch-api.onrender.com/api/reactedvideos",options)
             console.log(response,4);
             const jsonResponse =await response.json()
             if(response.ok){

@@ -24,7 +24,7 @@ function useSignup(){
         }
         
             setIsLoading(true)
-            const response = await fetch("/api/user/signup",options)
+            const response = await fetch("https://nxtwatch-api.onrender.com/api/user/signup",options)
             const jsonResponse = await response.json()
             if(response.ok){
                 setIsLoading(false)

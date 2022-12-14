@@ -29,7 +29,7 @@ function Home() {
                     "Authorization":`Bearer ${user.token}` 
                 }
             }
-            const response = await fetch(".api/videos",options)
+            const response = await fetch("https://nxtwatch-api.onrender.comapi/videos",options)
             const jsonResponse = await response.json()
             if(response.ok){
                 console.log(jsonResponse)
