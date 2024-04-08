@@ -11,7 +11,7 @@ const videoReducer = (state,action) =>{
         case "ADD_VIDEOS":
             // console.log(action.payload)
             if(action.payload.length>0){
-                console.log("lopalki")
+                
                 return {reactedVideos:[...action.payload,...state.reactedVideos]}
             }
             return state
