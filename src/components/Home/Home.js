@@ -20,7 +20,7 @@ function Home() {
     useEffect(()=>{
         const fetchVideos =async() =>{
             const user =JSON.parse(localStorage.getItem("user"))
-            console.log(user,"home")
+            //console.log(user,"home")
 
             const options ={
                 method:"GET",
@@ -32,7 +32,7 @@ function Home() {
             const response = await fetch("https://nxtwatch-api.onrender.com/api/videos",options)
             const jsonResponse = await response.json()
             if(response.ok){
-                console.log(jsonResponse)
+                //console.log(jsonResponse)
                 setVideosList(jsonResponse.videosList)
                 setLoading(false)
             }
